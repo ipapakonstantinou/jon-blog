@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -36,31 +37,31 @@ const Header = () => {
         <div className="flex items-center justify-between h-14 sm:h-16 pill-nav px-4 sm:px-6">
           {/* Logo */}
           <div className="flex items-center min-w-0">
-            <a href="/" className="flex items-center gap-1.5 sm:gap-2">
+            <Link to="/" className="flex items-center gap-1.5 sm:gap-2">
               <div className="w-7 h-7 sm:w-8 sm:h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
                 <span className="text-primary-foreground font-bold text-base sm:text-lg">P</span>
               </div>
               <span className="text-base sm:text-xl font-bold font-serif truncate">Perspective</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-2">
-            <a href="/" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+            <Link to="/" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
               Home
-            </a>
-            <a href="/#articles" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+            </Link>
+            <a href="#articles" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
               Articles
             </a>
-            <a href="/wellness" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+            <Link to="/wellness" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
               Wellness
-            </a>
-            <a href="/travel" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+            </Link>
+            <Link to="/travel" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
               Travel
-            </a>
-            <a href="/about" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+            </Link>
+            <Link to="/about" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
               About
-            </a>
+            </Link>
           </nav>
 
           {/* Actions */}
@@ -96,21 +97,21 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col gap-4">
-              <a href="/" className="text-sm font-medium hover:text-accent transition-colors">
+              <Link to="/" className="text-sm font-medium hover:text-accent transition-colors">
                 Home
-              </a>
-              <a href="/#articles" className="text-sm font-medium hover:text-accent transition-colors">
+              </Link>
+              <a href="#articles" className="text-sm font-medium hover:text-accent transition-colors">
                 Articles
               </a>
-              <a href="/wellness" className="text-sm font-medium hover:text-accent transition-colors">
+              <Link to="/wellness" className="text-sm font-medium hover:text-accent transition-colors">
                 Wellness
-              </a>
-              <a href="/travel" className="text-sm font-medium hover:text-accent transition-colors">
+              </Link>
+              <Link to="/travel" className="text-sm font-medium hover:text-accent transition-colors">
                 Travel
-              </a>
-              <a href="/about" className="text-sm font-medium hover:text-accent transition-colors">
+              </Link>
+              <Link to="/about" className="text-sm font-medium hover:text-accent transition-colors">
                 About
-              </a>
+              </Link>
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-full">
                 Join Now
               </Button>

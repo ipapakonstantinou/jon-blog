@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import ArticleCard from "@/components/ArticleCard";
 import HeroSection from "@/components/HeroSection";
@@ -64,32 +65,32 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-4">Explore</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/wellness" className="hover:text-accent transition-colors">Wellness</a></li>
-                <li><a href="/travel" className="hover:text-accent transition-colors">Travel</a></li>
-                <li><a href="/creativity" className="hover:text-accent transition-colors">Creativity</a></li>
-                <li><a href="/growth" className="hover:text-accent transition-colors">Growth</a></li>
+                <li><Link to="/wellness" className="hover:text-accent transition-colors">Wellness</Link></li>
+                <li><Link to="/travel" className="hover:text-accent transition-colors">Travel</Link></li>
+                <li><Link to="/creativity" className="hover:text-accent transition-colors">Creativity</Link></li>
+                <li><Link to="/growth" className="hover:text-accent transition-colors">Growth</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold mb-4">About</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/about" className="hover:text-accent transition-colors">Our Story</a></li>
-                <li><a href="/authors" className="hover:text-accent transition-colors">Authors</a></li>
-                <li><a href="/contact" className="hover:text-accent transition-colors">Contact</a></li>
+                <li><Link to="/about" className="hover:text-accent transition-colors">Our Story</Link></li>
+                <li><Link to="/authors" className="hover:text-accent transition-colors">Authors</Link></li>
+                <li><Link to="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Resources</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/style-guide" className="hover:text-accent transition-colors">Style Guide</a></li>
-                <li><a href="/#newsletter" className="hover:text-accent transition-colors">Newsletter</a></li>
+                <li><Link to="/style-guide" className="hover:text-accent transition-colors">Style Guide</Link></li>
+                <li><a href="#newsletter" className="hover:text-accent transition-colors">Newsletter</a></li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Legal</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms" className="hover:text-accent transition-colors">Terms of Service</a></li>
+                <li><Link to="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="hover:text-accent transition-colors">Terms of Service</Link></li>
               </ul>
             </div>
           </div>
