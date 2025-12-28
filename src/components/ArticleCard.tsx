@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 interface ArticleCardProps {
@@ -23,8 +24,8 @@ const ArticleCard = ({ id, title, category, date, image, size = "small" }: Artic
   };
 
   return (
-    <a
-      href={`/article/${id}`}
+    <Link
+      to={`/article/${id}`}
       className={`group relative block rounded-[2.5rem] overflow-hidden card-hover ${
         size === "large" ? "col-span-1 md:col-span-2 row-span-2" : ""
       }`}
@@ -68,7 +69,7 @@ const ArticleCard = ({ id, title, category, date, image, size = "small" }: Artic
           <ArrowUpRight className="w-5 h-5" />
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 
